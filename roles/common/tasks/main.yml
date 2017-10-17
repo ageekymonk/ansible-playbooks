@@ -1,0 +1,5 @@
+---
+- block:
+    - include: install.yml
+  tags:
+    - build

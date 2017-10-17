@@ -1,0 +1,23 @@
+---
+- name: "Yum Install all Essential Packages"
+  yum:
+    name: {{ item }}
+    state: present
+  with_items:
+    - bind-utils
+    - collectd
+    - git
+    - jq
+    - lsof
+    - make
+    - nc
+    - ncdu
+    - ngrep
+    - socat
+    - strace
+    - the_silver_searcher
+    - tmux
+    - traceroute
+    - tree
+    - unzip
+  when: ansible_distribution == "Red Hat Enterprise Linux" or ansible_distribution == "CentOS"
